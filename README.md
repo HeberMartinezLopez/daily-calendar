@@ -8,20 +8,25 @@ This daily work scheduler was created to plan daily work schedule from 9 AM-5 PM
 
 N/A
 
+## Deployed Link
+
+[hebermartinezlopez.github.io/work-day-scheduler/](https://hebermartinezlopez.github.io/work-day-scheduler/ "https://hebermartinezlopez.github.io/work-day-scheduler/")
+
 ## Usage
 
 When this app is opened, you will find the current date displayed as day of the week, month day, year. You will also see time blocks color coded for past, present and future, depending on time of day.
-These time blocks are for regular business hours, 9 AM-5 PM. To use this app, you just need to click on time block you want to add an event to and then hit the save button to the right. 
+These time blocks are for regular business hours, 9 AM-5 PM. To use this app, you just need to click on time block you want to add an event to and then hit the save button to the right.
 The text will be saved to localStorage and will persist upon refreshing the page.
 
 ## Credits
 
 Day.js
-<https://day.js.org/>
+[https://day.js.org/](https://day.js.org/)
 
 ## License
 
-Please refer to LICENSE in this repo.  
+Please refer to LICENSE in this repo.
 
 ---
+
 ![Static Badge](https://img.shields.io/badge/build-passing-brightgreen)
