@@ -21,6 +21,14 @@ $(function () {
   }
   colorUpdate();
   setInterval(colorUpdate, 10000);
+  $(".saveBtn").on("click",function(){
+    var description = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    localStorage.setItem(time,description);
+  })
+  for(var i = 9; i <= 17; i++){
+    $(`#hour-${i} .description`).val(localStorage.getItem(`hour-${i}`))
+  }
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
