@@ -4,6 +4,23 @@
 $(function () {
   console.log("Sup!")
   $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
+  function colorUpdate(){
+    let dayjsTime = dayjs().hour()
+    $(".time-block").each(function(){
+      var currentHour = parseInt($(this).attr("id").split("-")[1]);
+      if(currentHour < dayjsTime){
+        $(this).addClass("past");
+      }
+      else if(currentHour === dayjsTime){
+        $(this).addClass("present");
+      }
+      else{
+        $(this).addClass("future");
+      }
+    })
+  }
+  colorUpdate();
+  setInterval(colorUpdate, 10000);
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
